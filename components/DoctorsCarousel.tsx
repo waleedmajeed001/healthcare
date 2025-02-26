@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaInstagram, FaFacebookF, FaHeart, FaTwitter } from "react-icons/fa";
 
 const doctors = [
@@ -36,10 +37,12 @@ const SpecialDoctors = () => {
             key={index}
             className="group relative bg-white rounded-xl shadow-md overflow-hidden w-[320px] h-[500px] transition-all duration-300 hover:shadow-lg hover:-translate-y-2"
           >
-            {/* Doctor Image */}
-            <img
+            {/* Doctor Image (Replaced <img> with <Image />) */}
+            <Image
               src={doctor.image}
               alt={doctor.name}
+              width={320}
+              height={380}
               className="w-full h-[75%] object-cover"
             />
 
