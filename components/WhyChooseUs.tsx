@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function WhyChooseUs() {
   const router = useRouter();
 
-  const handleClick = (path) => {
+  const handleClick = (path: string) => {
     router.push(path);
   };
 
