@@ -16,7 +16,6 @@ const page = () => {
       <WhyChooseUs />
       <SpecialDoctors />
       <AlphabetSearch />
-      <AppointmentForm />
     </div>
   )
 }

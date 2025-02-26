@@ -10,7 +10,7 @@ const AlphabetSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const router = useRouter();
 
-  const handleLetterClick = (letter) => {
+  const handleLetterClick = (letter: string) => {
     router.push(`/diseases/${letter}`);
   };
 
@@ -18,7 +18,9 @@ const AlphabetSearch = () => {
     <div className="flex w-full p-6 gap-4">
       {/* Left Side - Alphabet Buttons */}
       <div className="w-1/2 flex flex-wrap gap-3">
-        <h2 className="font-semibold w-full mb-3 text-md">Find diseases & conditions by first letter</h2>
+        <h2 className="font-semibold w-full mb-3 text-md">
+          Find diseases & conditions by first letter
+        </h2>
         {alphabet.map((letter) => (
           <button
             key={letter}
@@ -32,7 +34,9 @@ const AlphabetSearch = () => {
 
       {/* Right Side - Search Bar */}
       <div className="w-1/2">
-        <h2 className="font-semibold mb-3 text-md">Search diseases & conditions</h2>
+        <h2 className="font-semibold mb-3 text-md">
+          Search diseases & conditions
+        </h2>
         <div className="relative">
           <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
           <Input
